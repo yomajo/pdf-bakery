@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    container_name: bakery-app
+    env_file: .env
+    restart: unless-stopped
+    ports:
+      - 5000:5000
+    volumes:
+      - ./main.py:/home/app/main.py
+      - ./templates:/home/app/templates
+      - ./static:/home/app/static
+      - ./pdfs:/home/app/pdfs

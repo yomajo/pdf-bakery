@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Target for PDF</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/bulma.min.css', _external=True) }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/more.css', _external=True) }}">
+</head>
+
+<body>
+
+  <article class="content break-after">
+    <h1>First Page</h1>
+    <h3>Some subtitle</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia vero laborum sint, eaque mollitia ipsam
+      esse et
+      fuga, commodi qui voluptates at iusto, libero totam quo sunt aut incidunt distinctio iure ipsa pariatur
+      ratione aperiam neque, perferendis similique error aspernatur fugiat quia. Expedita, ducimus corporis.
+    </p>
+
+    <img src="data:image/jpeg;base64,{{ img_b64 }}" alt="Alt meme dont to justice" style="width: 450px;">
+
+    <p class="has-text-success">Minimally styled text</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi minima asperiores itaque quis. Animi
+      corporis et nihil provident quis minus, placeat, obcaecati repudiandae porro totam dolores, corrupti
+      nesciunt dolore beatae!</p>
+  </article>
+
+  <article class="content break-after">
+    <h1>Second page</h1>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas mollitia nesciunt placeat ullam atque
+      consectetur eos rem incidunt soluta eveniet?</p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga assumenda saepe accusamus aut alias quasi minus
+      architecto ab harum optio iste, odio incidunt magni aperiam hic nam, ullam consequatur voluptatibus. Delectus
+      voluptas nesciunt quod asperiores quisquam, sequi dolorem dolor harum hic deserunt recusandae impedit dolores
+      temporibus, voluptates a corrupti itaque.</p>
+  </article>
+
+</body>
+
+</html>

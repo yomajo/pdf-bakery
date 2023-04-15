@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Bakery</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/bulma.min.css') }}">
+</head>
+
+<body>
+  <div class="section">
+    <div class="container">
+
+      <h1 class="title is-3">All endpoints</h1>
+
+      <div class="tile is-ancestor">
+        <div class="tile is-parent">
+
+          <div class="tile is-child box has-text-centered">
+            <p class="title is-5">Home</p>
+            <a href="{{ url_for('index') }}" class="button">Home</a>
+          </div>
+
+          <div class="tile is-child box has-text-centered">
+            <p class="title is-5">View Target Page</p>
+            <a href="{{ url_for('render') }}" class="button">View HTML</a>
+          </div>
+
+          <div class="tile is-child box has-text-centered">
+            <p class="title is-5">Save Target as PDF to /pdfs</p>
+            <a href="{{ url_for('save_pdf') }}" class="button">Save PDF</a>
+          </div>
+
+          <div class="tile is-child box has-text-centered">
+            <p class="title is-5">Download PDF</p>
+            <a href="{{ url_for('download') }}" class="button">Download</a>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</body>
+
+</html>
