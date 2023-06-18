@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Target for PDF</title>
+</head>
+
+<body>
+
+  {% for pg in data %}
+
+  <article class="content break-after">
+    <h1>Page {{ pg }}</h1>
+    
+    <p class="has-text-warning">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati doloremque porro, maxime vero enim magnam sunt
+      quasi officiis eaque ad.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate itaque deleniti asperiores laudantium.
+      Quaerat doloribus distinctio explicabo tempore blanditiis ipsa, quos voluptatibus libero. Harum inventore quos at
+      iusto unde, ab dolor, maiores ad incidunt optio accusamus voluptatum neque ipsam perspiciatis? Nemo tenetur
+      nostrum itaque, voluptatibus odio earum beatae possimus expedita?</p>
+      <h3>Some subtitle</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia vero laborum sint, eaque mollitia ipsam
+        esse et
+      fuga, commodi qui voluptates at iusto, libero totam quo sunt aut incidunt distinctio iure ipsa pariatur
+      ratione aperiam neque, perferendis similique error aspernatur fugiat quia. Expedita, ducimus corporis.
+    </p>
+    <p class="has-text-danger">Page ending...</p>
+
+  </article>
+
+  {% endfor %}
+
+</body>
+
+</html>

@@ -17,6 +17,8 @@ PDF_OPTIONS = {
     'margin-left': '5mm',
     'encoding': 'UTF-8',
 }
+PAGES_DATA = [1, 2, 3, 4, 5, 6, 7, 8]
+INCLUDE_CSS = ['static/style/bulma.min.css', 'static/style/more.css']
 
 def get_image_file_as_base64_data(fpath):
     with open(fpath, 'rb') as image_file:
@@ -30,15 +32,17 @@ def index():
 
 @app.route('/render')
 def render():
-    img_b64 = get_image_file_as_base64_data(IMG_PATH)
-    return render_template('target.html', img_b64=img_b64)
+    # img_b64 = get_image_file_as_base64_data(IMG_PATH)
+    # return render_template('target.html', img_b64=img_b64)
+    return render_template('target_2.html', data=PAGES_DATA)
 
 
 @app.route('/save_pdf')
 def save_pdf():
-    img_b64 = get_image_file_as_base64_data(IMG_PATH)
-    html_content = render_template('target.html', img_b64=img_b64)
-    pdfkit.from_string(input=html_content, output_path=PDF_PATH, options=PDF_OPTIONS)
+    # img_b64 = get_image_file_as_base64_data(IMG_PATH)
+    # html_content = render_template('target.html', img_b64=img_b64)
+    html_content = render_template('target_2.html', data=PAGES_DATA)
+    pdfkit.from_string(input=html_content, output_path=PDF_PATH, options=PDF_OPTIONS, css=INCLUDE_CSS)
     return f'''Saved pdf. It\'s in {PDF_PATH}<br> \
         <a href="{url_for('index')}"><button>Back to Home</button></a> \
         <a href="{url_for('download')}"><button>Download converted pdf</button></a>'''
