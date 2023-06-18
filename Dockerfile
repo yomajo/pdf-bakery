@@ -22,8 +22,10 @@ RUN apt-get update \
     libx11-6 libxcb1 libxext6 libxrender1 xfonts-75dpi xfonts-base libfontconfig1 \
     fontconfig-config libx11-data libxau6 libxdmcp6 xfonts-utils ucf fonts-dejavu-core \
     ttf-bitstream-vera fonts-liberation libbsd0 libfontenc1 libxfont2 \
-    x11-common xfonts-encodings \
-    && wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.buster_amd64.deb \
+    x11-common xfonts-encodings
+RUN wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_amd64.deb && \
+    dpkg -i libssl1.1_1.1.1f-1ubuntu2_amd64.deb
+RUN wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.buster_amd64.deb \
     && dpkg -i wkhtmltox_0.12.6-1.buster_amd64.deb
 
 # Setup env for final image
